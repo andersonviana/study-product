@@ -20,11 +20,20 @@ public class ProdutoController {
     @Autowired
     private ProdutoService produtoService;
 
+    /**
+     * Metodo controller que devolve todos os produtos.
+     * @return
+     */
     @GetMapping("/obtertodos")
     public List<Produto> obterTodos(){
         return produtoService.obterTodos();
     }
 
+    /**
+     * Endpoint para adicionar um produto.
+     * @param produto
+     * @return Produto criado.
+     */
     @PostMapping("/adicionarProduto")
     public Produto adicionarProduto(@RequestBody Produto produto){
         return produtoService.adicionar(produto);
