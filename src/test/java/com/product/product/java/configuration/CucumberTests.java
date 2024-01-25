@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
                 "json:src/test/resources/report/cucumber.json"},
         glue = {"StepDef"},
         features = {"src/test/resources/features"},
-        tags = "")
+        tags = "@test")
 public class CucumberTests {
 
 }

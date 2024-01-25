@@ -6,8 +6,6 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java8.Pt;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class ProductStepDef implements Pt {
     public ProductStepDef() {
