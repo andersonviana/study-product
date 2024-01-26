@@ -1,16 +1,16 @@
 package com.product.product.repository;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
 
+import com.product.product.model.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Repository;
 
 import com.product.product.model.Produto;
 
 @Repository
-public class ProdutoRepository {
+public class ProdutoRepository_old {
     
     private ArrayList<Produto> produtos = new ArrayList<Produto>();
     private int ultimoId=0;
@@ -64,7 +64,7 @@ public class ProdutoRepository {
         Optional<Produto> produtoEncontrado = obterPorId(produto.getId());
 
         if(produtoEncontrado.isEmpty()){
-            throw new InputMismatchException("Produto não encontrado");
+            throw new ResourceNotFoundException("Produto não encontrado");
         }
 
         deletar(produto.getId());
