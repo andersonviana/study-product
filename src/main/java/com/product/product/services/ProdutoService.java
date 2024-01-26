@@ -20,7 +20,7 @@ public class ProdutoService {
      * @return lista de produtos
      */
     public List<Produto> obterTodos(){
-        return produtoRepository.obterTodos();
+        return produtoRepository.findAll();
     }
 
     /**
@@ -29,7 +29,7 @@ public class ProdutoService {
      * @return um produto repository por id
      */
     public Optional<Produto> obterPorid(int id){
-        return produtoRepository.obterPorId(id);
+        return produtoRepository.findById(id);
     }
 
     /**
@@ -38,7 +38,7 @@ public class ProdutoService {
      * @return produto repository apos adicionar um produto
      */
     public Produto adicionar(Produto produto){
-        return produtoRepository.adicionar(produto);
+        return produtoRepository.save(produto);
     }
 
     /**
@@ -46,7 +46,7 @@ public class ProdutoService {
      * @param id 
      */
     public void deletar(int id){
-        produtoRepository.deletar(id);
+        produtoRepository.deleteById(id);
     }
 
     /**
@@ -57,6 +57,6 @@ public class ProdutoService {
      */
     public Produto atualizar(int id, Produto produto){
         produto.setId(id);
-        return produtoRepository.atualizar(produto);
+        return produtoRepository.save(produto);
     }
 }
