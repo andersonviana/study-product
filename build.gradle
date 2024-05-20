@@ -29,11 +29,17 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	implementation 'org.postgresql:postgresql'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
+    implementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.15.0'
+    implementation group: 'io.cucumber', name: 'cucumber-spring', version: '7.15.0'
+	implementation group: 'io.cucumber', name: 'cucumber-java8', version: '7.15.0'
 }
 
 dependencyManagement {
